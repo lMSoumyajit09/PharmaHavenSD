@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>PharmaHaven SD</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="header">
+    <h1>PharmaHaven SD</h1>
+    <p class="owner">Soumyajit Seal</p>
+    <p class="details">Halisahar | +91-9836061563</p>
+</div>
+
+<div class="main">
+
+    <div class="left">
+        <h2>Customer Details</h2>
+
+        <input type="text" id="customerName" placeholder="Customer Name">
+        <input type="text" id="address" placeholder="Address">
+        <input type="number" id="age" placeholder="Age">
+        <input type="text" id="mobile" placeholder="Mobile Number">
+        <input type="text" id="doctorName" placeholder="Doctor Name">
+        <input type="text" id="regNo" placeholder="Doctor Reg No">
+
+        <p><strong>Date:</strong> <span id="date"></span></p>
+        <p><strong>Bill No:</strong> <span id="billNo"></span></p>
+    </div>
+
+    <div class="right">
+        <h2>Medicine Details</h2>
+
+        <div id="medicineContainer">
+            <div class="medicineRow">
+                <input type="text" class="medName" placeholder="Medicine Name">
+                <input type="number" class="medPrice" placeholder="Price">
+                <input type="number" class="medQty" placeholder="Qty">
+            </div>
+        </div>
+
+        <button onclick="addMedicine()">+ Add Medicine</button>
+
+        <h3>Total: ₹ <span id="totalAmount">0</span></h3>
+
+        <button onclick="saveRecord()">Save Record</button>
+        <button onclick="generatePDF()">Download Bill PDF</button>
+    </div>
+
+</div>
+
+<footer>
+© 2026 PharmaHaven SD | Designed & Created by S. Seal
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
